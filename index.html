@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Share test</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="height: 100vh; background-color: gray; overflow: hidden;">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-12">
+            <div class="mt-5">
+                <!-- Link to social share -->
+                <a href="#" class="share-twitter btn btn-primary">
+                    Test share - Twitter
+                </a>
+            </div>
+            <div class="mt-5">
+                <!-- Link to social share -->
+                <a href="#" class="share-whatsapp btn btn-primary">
+                    Test share - Whatsapp
+                </a>
+            </div>
+            <div class="mt-5">
+                <!-- Link to social share -->
+                <a href="#" class="share-facebook btn btn-primary">
+                    Test share - Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- My script -->
+<script>
+    const text = "hello😉";
+    const url = $(location).attr('href');
+    const twitter = "Mcuello17";
+    $('a').on('click', function(e){
+        e.preventDefault();        
+        if($(this).hasClass('share-twitter')){    
+           window.open('https://twitter.com/intent/tweet?via=' + twitter + '&text=' + text + '&url=' + url,
+           'twiiter-share-dialog',
+           'width=500, height=600');
+        }else if($(this).hasClass('share-whatsapp')){
+           window.open('https://api.whatsapp.com/send?text='+ text + '%20via:%20' + url,
+           'whatsapp-share-dialog');
+        }else if($(this).hasClass('share-facebook')){
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+           'facebook-share-dialog',
+           'width=600, height=600');
+        }
+    });
+</script>
+
+</body>
+</html>
