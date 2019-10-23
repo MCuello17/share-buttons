@@ -4,6 +4,6 @@ Social Network share examples
 This repo contains share buttons for **Twitter**, **Facebook** and **Whatsapp**
 Working on desktop and mobile.
 
-You can test the functionality of the buttons by opening the next url:
+You can test the functionality of the buttons by clicking on the next link:
 
-https://app.netlify.com/sites/sad-blackwell-c567db/overview
+https://sad-blackwell-c567db.netlify.com/
