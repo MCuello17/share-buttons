@@ -6,4 +6,4 @@ Working on desktop and mobile.
 
 You can test the functionality of the buttons by clicking on the next link:
 
-https://sad-blackwell-c567db.netlify.com/
+https://share-buttons.netlify.com/
